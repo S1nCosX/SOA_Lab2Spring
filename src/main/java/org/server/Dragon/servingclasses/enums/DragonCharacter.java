@@ -1,4 +1,4 @@
-package org.jpa.servingclasses.enums;
+package org.Dragon.servingclasses.enums;
 
 public enum DragonCharacter {
     CUNNING,

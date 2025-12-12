@@ -1,6 +1,6 @@
-package org.services;
+package org.server.services;
 
-import org.jpa.Dragon;
+import org.Dragon.Dragon;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,5 +20,8 @@ public class DragonsService {
                     .append("&filter=").toString(),
             Dragon.class
         );
+    }
+    public void killDragon(Long id) {
+        restTemplate.delete(basicUrl.append(id.toString()).toString());
     }
 }

@@ -1,4 +1,4 @@
-package org.jpa.servingclasses.classes;
+package org.Dragon.servingclasses.classes;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

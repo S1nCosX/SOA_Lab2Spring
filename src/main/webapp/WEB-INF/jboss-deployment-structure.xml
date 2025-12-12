@@ -1,0 +1,10 @@
+<jboss-deployment-structure>
+    <deployment>
+        <exclusions>
+            <module name="org.hibernate"/>
+            <module name="org.hibernate.jpa"/>
+            <module name="org.jboss.logging"/>
+            <module name="jakarta.persistence.api"/>
+        </exclusions>
+    </deployment>
+</jboss-deployment-structure>

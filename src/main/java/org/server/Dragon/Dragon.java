@@ -1,11 +1,11 @@
-package org.jpa;
+package org.Dragon;
 
 import lombok.*;
-import org.jpa.servingclasses.classes.Coordinates;
-import org.jpa.servingclasses.classes.DragonCave;
-import org.jpa.servingclasses.enums.Color;
-import org.jpa.servingclasses.enums.DragonCharacter;
-import org.jpa.servingclasses.enums.DragonType;
+import org.Dragon.servingclasses.classes.Coordinates;
+import org.Dragon.servingclasses.classes.DragonCave;
+import org.Dragon.servingclasses.enums.Color;
+import org.Dragon.servingclasses.enums.DragonCharacter;
+import org.Dragon.servingclasses.enums.DragonType;
 
 import java.util.Date;
 
