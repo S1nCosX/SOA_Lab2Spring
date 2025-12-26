@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/killer/api")
+@RequestMapping("/api/killer/dragon")
 public class KillerController {
     private final DragonsService dragonsService;
 
@@ -16,7 +16,7 @@ public class KillerController {
         this.dragonsService = dragonsService;
     }
 
-    @GetMapping("/dragon/find-by-cave-depth/{type}")
+    @GetMapping("/find-by-cave-depth/{type}")
     public ResponseEntity<Dragon> getExtremumDepthDragon(@PathVariable("type") String type,
                                                          HttpServletRequest request) {
         Dragon response_obj = dragonsService.findDeepestDragon(type);
@@ -26,7 +26,7 @@ public class KillerController {
         return new ResponseEntity<Dragon>(response_obj, HttpStatus.OK);
     }
 
-    @PostMapping("/kill/{id}")
+    @DeleteMapping("/{id}/kill")
     public void addDragonSlayersTeam(
             @PathVariable long id
     ) {

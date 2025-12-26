@@ -16,7 +16,7 @@ public class DragonsService {
     public Dragon findDeepestDragon(String order) {
         return restTemplate.getForObject(
             basicUrl.append("?page=1&size=1&sort=d.cave.depth ")
-                    .append(order == "max" ? "desc" : "")
+                    .append(order == "true" ? "desc" : "")
                     .append("&filter=").toString(),
             Dragon.class
         );
