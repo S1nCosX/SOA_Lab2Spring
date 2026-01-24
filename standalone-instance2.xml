@@ -1,0 +1,23 @@
+<!--
+  WildFly Standalone Configuration for Instance 2
+  This file should be copied to WildFly's standalone/configuration/ directory
+  and used with: ./standalone.sh -c standalone-instance2.xml -Djboss.socket.binding.port-offset=100
+-->
+
+<!-- Key changes from default standalone.xml:
+  1. HTTP port: 8180 (8080 + 100 offset)
+  2. HTTPS port: 8543 (8443 + 100 offset)
+  3. Management port: 10090 (9990 + 100 offset)
+  4. EJB pool configuration for Stateless EJBs
+-->
+
+<!-- EJB Pool Configuration (add to subsystem ejb3) -->
+<!--
+<subsystem xmlns="urn:jboss:domain:ejb3:15.0">
+    ...
+    <strict-max-bean-instance-pools>
+        <slsb-strict-max-pool name="slsb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
+    </strict-max-bean-instance-pools>
+    ...
+</subsystem>
+-->

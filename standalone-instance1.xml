@@ -1,0 +1,23 @@
+<!--
+  WildFly Standalone Configuration for Instance 1
+  This file should be copied to WildFly's standalone/configuration/ directory
+  and used with: ./standalone.sh -c standalone-instance1.xml
+-->
+
+<!-- Key changes from default standalone.xml:
+  1. HTTP port: 8080 (default)
+  2. HTTPS port: 8443 (default)
+  3. Management port: 9990 (default)
+  4. EJB pool configuration for Stateless EJBs
+-->
+
+<!-- EJB Pool Configuration (add to subsystem ejb3) -->
+<!--
+<subsystem xmlns="urn:jboss:domain:ejb3:15.0">
+    ...
+    <strict-max-bean-instance-pools>
+        <slsb-strict-max-pool name="slsb-strict-max-pool" max-pool-size="20" instance-acquisition-timeout="5" instance-acquisition-timeout-unit="MINUTES"/>
+    </strict-max-bean-instance-pools>
+    ...
+</subsystem>
+-->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss:ejb-jar xmlns:jboss="https://www.jboss.org/xml/ns/jakartaee"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="https://www.jboss.org/xml/ns/jakartaee
+                                   https://www.jboss.org/xml/ns/jakartaee/jboss-ejb3_2_0.xsd"
+               version="2.0">
+    <jboss:enterprise-beans>
+        <jboss:session>
+            <jboss:ejb-name>DragonsBusinessBean</jboss:ejb-name>
+            <jboss:remote-binding>
+                <jboss:jndi-name>java:global/ejb-module/DragonsBusinessBean!org.server.ejb.interfaces.DragonsBusinessInterface</jboss:jndi-name>
+            </jboss:remote-binding>
+            <jboss:pool>
+                <jboss:bean-instance-pool-ref pool-name="slsb-strict-max-pool"/>
+            </jboss:pool>
+        </jboss:session>
+    </jboss:enterprise-beans>
+</jboss:ejb-jar>
